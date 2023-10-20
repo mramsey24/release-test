@@ -21,15 +21,17 @@ jobs:
       runs-on: ubuntu-latest
       needs: package-build
       steps:
+
+        # Checkout
+        - name: Checkout repo
+          uses: actions/checkout@v3
+
         - name: Download Artifact
           uses: actions/download-artifact@v3
 
         - name: List Files
           run: ls -alR
 
-        # Checkout
-        - name: Checkout repo
-          uses: actions/checkout@v3
 
         # Upload new release
         - name: Make Release 
@@ -40,7 +42,7 @@ jobs:
             prerelease: true
             title: "Development Build"
             files: |
-              my-artifact/*
+              my-artifact/hello-world.txt
               README.md
-              hello-world.txt         
+              
               
