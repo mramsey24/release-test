@@ -25,7 +25,7 @@ jobs:
           uses: actions/download-artifact@v3
 
         - name: List Files
-          run: ls -al
+          run: ls -alR
 
         # Checkout
         - name: Checkout repo
