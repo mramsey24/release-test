@@ -42,7 +42,7 @@ jobs:
             prerelease: true
             title: "Development Build"
             files: |
-              build\Build.zip
+              build
             
               
               
