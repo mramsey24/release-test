@@ -14,8 +14,8 @@ jobs:
       - name: Upload Files
         uses: actions/upload-artifact@v3
         with:
-          name: my-artifact
-          path: hello-world.txt
+          name: built-artifact
+          path: build
 
     create-release:
       runs-on: ubuntu-latest
@@ -28,6 +28,8 @@ jobs:
 
         - name: Download Artifact
           uses: actions/download-artifact@v3
+          with: 
+            name: built-artifact
 
         - name: List Files
           run: ls -alR
