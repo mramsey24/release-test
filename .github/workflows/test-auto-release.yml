@@ -33,8 +33,7 @@ jobs:
 
         - name: List Files
           run: ls -alR
-
-
+          
         # Upload new release
         - name: Make Release 
           uses: "marvinpinto/action-automatic-releases@latest"
