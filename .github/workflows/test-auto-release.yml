@@ -42,7 +42,7 @@ jobs:
             prerelease: true
             title: "Development Build"
             files: |
-              my-artifact/hello-world.txt
-              README.md
+              build\Build.zip
+            
               
               
